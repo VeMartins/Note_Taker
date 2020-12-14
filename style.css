@@ -1,0 +1,250 @@
+
+/* Below Elements created in HTML */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px  #rgba(0,109,119, 0.6); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #rgba(0,109,119, 0.6); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track:hover {
+	background: #735d78;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4cc9f0; 
+}
+
+.indexBody {
+	/*font-family: "Dauphin", Arial, serif;*/
+	margin: 0;
+	background-color: #b392ac;
+	display: grid;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-columns: auto;
+	grid-template-areas: "title"
+						 "hd"
+						 "main"
+						 "btnDiv"
+						 "noteDisp";
+}
+
+
+header {
+	color: #b392ac;
+	font-weight: bold;
+	background-color:  #735d78;
+	margin: 0 0 10px 0;
+	grid-area: title;
+}
+h1 {
+	margin: 0;
+	font-size: 40px;
+	text-align:center;
+}
+
+
+
+
+.h2_label {
+	grid-area: hd; 
+	margin: auto;
+	height: 100%;
+	width: fit-content;
+}
+h2 {
+	margin: 0;
+	align-self: center;
+	color: black;
+	font-size: 1.8vw;
+	font-weight: bold;
+}
+#indexForm {grid-area: main;}
+.inpText {
+	border-radius: 10%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+#indexLabel {
+	align-self: flex-start;
+	font-size: 1.5vw;
+	margin-right: 5px;
+	color: #735d78;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px black;
+} 
+#newNote {
+	background-color: rgb(247,209,205);
+	color: black;
+	font: 1.2vw Arial, serif;
+	padding: 1%;
+	border:2px solid #735d78;
+	border-radius: 10px;
+	width: 40%;
+	height: 90px;
+}
+.btnDiv {
+	grid-area: btnDiv;
+	text-align: center;
+}
+.btn {
+	margin-top: 10px;
+	color: #f7d1cd;
+	background-color: #735d78;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 1vw;
+	padding: 1%;
+	outline: none;
+}
+.notePrint {
+	margin: 30px 0 0 0;
+	padding: 0;
+	grid-area: noteDisp;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Below elements that where created with JS */
+.noteBox {
+	 color: black;
+	 background-color: rgba(0,109,119, 0.6);
+	 font-size: 1.2vw;
+	 width: 15vw; 
+	 height:17vw;
+	 border: 1px solid #f7d1cd;
+	 border-radius: 10px;
+	 padding: 2px 2px 2px 2px;
+	 margin: 20px;
+	 overflow: auto;
+	 display: grid;
+	 grid-template-columns: 10% auto;
+	 grid-template-rows: auto auto 20%;
+	 grid-template-areas: "closeBtn txt"
+	 					  "closeBtn txt"
+	 					  "detailBtn detailBtn";	
+}
+#closeBtn {
+	align-self: flex-start;
+	grid-area: closeBtn;
+	color: #f7d1cd;
+	border: 1px;
+	cursor: pointer;
+}
+#closeBtn:hover {
+	color: black;
+	background-color: #b392ac;
+	border: 1px solid #f7d1cd;
+	border-radius: 50%;
+	margin-right: 4px;
+}
+
+.noteTxt {
+	grid-area: txt; 
+	margin: 0;
+	width:12vw ;
+	height: 13vw;
+	overflow: auto;
+}
+#detailBtn {
+	color: #f7d1cd;
+	background-color: #735d78;
+	font-size: 1vw;
+	grid-area: detailBtn;
+	position: sticky;
+	width:13vw;
+	height: 3vw;
+	padding: 0;
+	border-radius: 50%;
+	outline: none;
+	cursor: pointer;
+	margin: auto;
+}
+#popContent {
+	color: black;
+	background-color: #b392ac;
+	border: 5px solid rgb(0,109,119); 
+	font-size: 1.5vw;
+	line-height: 1.5;
+	font-family: Georgia, serif;
+	text-align: justify;
+	flex-flow: column wrap;
+	display: none;
+	overflow: auto;
+	z-index: 1;
+	border-radius: 10px;
+    /*Code below makes div always be in the center of the screen*/
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+.clone {
+	/*margin: 2% 0 10% 0;*/
+	margin: 0;
+	padding: 0 2% 1% 2%;
+}
+
+#popCloseBtn {
+	align-self: flex-start;
+	color: #f7d1cd;
+	padding: 2px;
+	border: 1px;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+#popCloseBtn:hover {
+	color: black;
+	background-color: rgb(247,209,205);
+	border: 1px solid #f7d1cd;
+	border-radius: 50%;
+	margin-right: 4px;
+}
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  
+   .btn, .noteBox, #detailBtn, #popContent, #indexLabel, h2 {
+    font-size: 1.2rem;
+  }
+  #newNote{
+    width: 60%;
+    font-size: 1.2rem;
+    max-height: 40%;
+  }
+  .noteBox {
+    width: 35vw; 
+    height: 37vw;
+  }
+  .noteTxt {
+    width:29vw ;
+    height: 30vw;
+  }
+  #detailBtn {
+    width: 25vw;
+    height: 6vw;
+    font-size: 1rem;
+  }
+  .clone, #popContent {
+    width: 80%;
+    max-height: 70%;
+  }
+}

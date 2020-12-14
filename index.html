@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="indexBody">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Note Taker</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="indexBody">
+	<header id="indexHeader">
+		<h1>Note Taker</h1>
+	</header>
+
+		<main>
+			<div class="noteForm">
+				<div class="h2_label">
+				<h2>Add a new note:</h2>
+				</div>
+				<form id='indexForm'>
+					<div class="inpText">
+						<label id="indexLabel" for="newNote">Note:</label>
+						<textarea name="newNote" class="textarea" id="newNote" cols="80" rows="2" maxlength="1000"></textarea>
+			        </div>
+			    </form> 
+			</div>    
+
+			<div class="btnDiv">
+				<button type="submit" class="btn" formtarget="_self" form="noteSubmit" onclick="addNote();">Add Note</button>
+			</div>
+		</main>   
+		
+			<div class="notePrint"></div>
+	
+				<div id="popContent">
+					<span id="popCloseBtn">&times;</span>
+				</div>
+		
+	
+<script type="text/javascript" src="script5.js"></script>
+</body>
+</html>
