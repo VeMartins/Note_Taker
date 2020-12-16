@@ -51,9 +51,9 @@ ul.topnav li a {background-color: #735d78;}
 ul.topnav li.right {float: right;}
 
 header {
-  color: #735d78;
+  color: #b392ac;
   font-weight: bold;
-  background-color: #b392ac;
+  background-color: #735d78;
   margin: 0 0 10px 0;
 }
 h1 {
@@ -245,6 +245,7 @@ h2 {
   grid-area: popCloseBtn;
   width: 20%;
   margin: 0 0 0 9%;
+
 }
 
 #popCloseBtn:hover {
@@ -253,6 +254,7 @@ h2 {
   border: 1px solid #f7d1cd;
   border-radius: 50%;
   margin-right: 4px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -260,11 +262,23 @@ h2 {
     width: 100%;
   }
   .noteBox {
-    width: 11rem;
-    height: 16rem;
+    width: 9rem;
+    height: 15rem;
     overflow-y: hidden;
   }
   #detailBtn {
     margin: 0 auto;
+    font-size: 0.8rem;
+    height: 2rem;
   }
+  #indexLabel {
+    font-size: 1.1rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  #closeBtn {
+    font-size: small;
+  }
+
 }
