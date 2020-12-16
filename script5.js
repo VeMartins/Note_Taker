@@ -48,7 +48,7 @@ const eventDelBtn = (closeBtn) => {
 };
 
 const openBox = (detailBtn) => {
-		popContent.style.display = "flex";
+		popContent.style.display = "grid";
 		detailBtn.stopPropagation();
 };
 
