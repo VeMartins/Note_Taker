@@ -207,6 +207,7 @@ h2 {
   font-size: 1.5rem;
   font-family: Georgia, serif;
   text-align: justify;
+  overflow-x: scroll;
   display: none;
   z-index: 1;
   max-height: 90%;
