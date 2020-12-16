@@ -255,4 +255,16 @@ h2 {
   margin-right: 4px;
 }
 
-
+@media only screen and (max-width: 600px) {
+  #newNote {
+    width: 100%;
+  }
+  .noteBox {
+    width: 11rem;
+    height: 16rem;
+    overflow-y: hidden;
+  }
+  #detailBtn {
+    margin: 0 auto;
+  }
+}
