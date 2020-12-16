@@ -226,13 +226,13 @@ h2 {
 
 }
 .clone {
+  box-sizing: border-box;	
   margin: 0;
-  padding: 0;
-   overflow: auto;
-   width: 88%;
-   word-break: break-word;
-   white-space: pre-line;
-   grid-area: cloneParag;
+  padding-right: : 1%;
+  overflow: auto;
+  width: 100%;
+  white-space: break-spaces;
+  grid-area: cloneParag;
 }
 
 #popCloseBtn {
