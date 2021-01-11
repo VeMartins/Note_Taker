@@ -4,13 +4,13 @@
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px  #rgba(0,109,119, 0.6); 
+  box-shadow: inset 0 0 5px #rgba(0, 109, 119, 0.6);
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #rgba(0,109,119, 0.6); 
+  background: #rgba(0, 109, 119, 0.6);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track:hover {
@@ -19,7 +19,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #4cc9f0; 
+  background: #4cc9f0;
 }
 
 /*________Navbar__________*/
@@ -32,7 +32,9 @@ ul.topnav {
   background-color: #735d78;
 }
 
-ul.topnav li {float: left;}
+ul.topnav li {
+  float: left;
+}
 
 ul.topnav li a {
   display: block;
@@ -44,11 +46,17 @@ ul.topnav li a {
   text-decoration: none;
 }
 
-ul.topnav li a:hover {background-color: #111;}
+ul.topnav li a:hover {
+  background-color: #111;
+}
 
-ul.topnav li a {background-color: #735d78;}
+ul.topnav li a {
+  background-color: #735d78;
+}
 
-ul.topnav li.right {float: right;}
+ul.topnav li.right {
+  float: right;
+}
 
 header {
   color: #b392ac;
@@ -58,7 +66,7 @@ header {
 }
 h1 {
   margin: 0;
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -71,16 +79,19 @@ h1 {
   display: grid;
   grid-template-rows: auto auto auto auto auto;
   grid-template-columns: auto;
-  grid-template-areas: "title"
-                       "hd"
-                       "main"
-                       "btnDiv"
-                       "noteDisp";
+  grid-template-areas:
+    "title"
+    "hd"
+    "main"
+    "btnDiv"
+    "noteDisp";
 }
-#indexHeader {grid-area: title;}
+#indexHeader {
+  grid-area: title;
+}
 
 .h2_label {
-  grid-area: hd; 
+  grid-area: hd;
   margin: auto;
   height: 100%;
   width: fit-content;
@@ -92,7 +103,9 @@ h2 {
   font-size: 1.6rem;
   font-weight: bold;
 }
-#indexForm {grid-area: main;}
+#indexForm {
+  grid-area: main;
+}
 .inpText {
   border-radius: 10%;
   display: flex;
@@ -108,13 +121,13 @@ h2 {
   color: #735d78;
   font-weight: bold;
   text-shadow: 1px 1px 1px black;
-} 
+}
 #newNote {
-  background-color: rgb(247,209,205);
+  background-color: rgb(247, 209, 205);
   color: black;
   font: 1.2rem Arial, serif;
   padding: 1%;
-  border:2px solid #735d78;
+  border: 2px solid #735d78;
   border-radius: 10px;
   width: 60%;
   height: 90px;
@@ -146,23 +159,24 @@ h2 {
 
 /* Below elements that where created with JS */
 .noteBox {
-   color: black;
-   background-color: rgba(0,109,119, 0.6);
-   font-size: 1.5rem;
-   width: 13rem; 
-   border: 1px solid #f7d1cd;
-   border-radius: 10px;
-   padding: 2px 2px 2px 2px;
-   margin: 20px;
-   overflow: auto;
-   word-break: break-word;
-   white-space: pre-line;
-   display: grid;
-   grid-template-columns: 10% auto;
-   grid-template-rows: auto auto 20%;
-   grid-template-areas: "closeBtn txt"
-              "closeBtn txt"
-              "detailBtn detailBtn";  
+  color: black;
+  background-color: rgba(0, 109, 119, 0.6);
+  font-size: 1.5rem;
+  width: 13rem;
+  border: 1px solid #f7d1cd;
+  border-radius: 10px;
+  padding: 2px 2px 2px 2px;
+  margin: 20px;
+  overflow: auto;
+  word-break: break-word;
+  white-space: pre-line;
+  display: grid;
+  grid-template-columns: 10% auto;
+  grid-template-rows: auto auto 20%;
+  grid-template-areas:
+    "closeBtn txt"
+    "closeBtn txt"
+    "detailBtn detailBtn";
 }
 #closeBtn {
   align-self: flex-start;
@@ -180,9 +194,9 @@ h2 {
 }
 
 .noteTxt {
-  grid-area: txt; 
+  grid-area: txt;
   margin: 0;
-  width:100%;
+  width: 100%;
   height: 13rem;
   overflow: auto;
 }
@@ -192,7 +206,7 @@ h2 {
   font-size: 1rem;
   grid-area: detailBtn;
   position: sticky;
-  width:90%;
+  width: 90%;
   height: 3rem;
   padding: 0;
   border-radius: 50%;
@@ -200,10 +214,10 @@ h2 {
   cursor: pointer;
   margin: auto;
 }
-#popContent {   
+#popContent {
   color: black;
   background-color: #b392ac;
-  border: 5px solid rgb(0,109,119); 
+  border: 5px solid rgb(0, 109, 119);
   font-size: 1.5rem;
   font-family: Georgia, serif;
   text-align: justify;
@@ -212,20 +226,20 @@ h2 {
   max-height: 90%;
   border-radius: 10px;
   grid-template-columns: 10% auto;
-   grid-template-rows: 10% auto;
-   grid-template-areas: "popCloseBtn cloneParag"
-                        "popCloseBtn cloneParag";
-                
-    /*Code below makes div always be in the center of the screen*/
-  position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 99%;
+  grid-template-rows: 10% auto;
+  grid-template-areas:
+    "popCloseBtn cloneParag"
+    "popCloseBtn cloneParag";
 
+  /*Code below makes div always be in the center of the screen*/
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
 }
 .clone {
-  box-sizing: border-box;	
+  box-sizing: border-box;
   margin: 0;
   padding-right: 1%;
   overflow: auto;
@@ -238,22 +252,19 @@ h2 {
   align-self: flex-start;
   color: #f7d1cd;
   padding: 5px;
-  border: 1px;
+  text-align: center;
   font-size: 1.2rem;
   cursor: pointer;
   grid-area: popCloseBtn;
   width: 20%;
   margin: 0 0 0 9%;
-
 }
 
 #popCloseBtn:hover {
   color: black;
-  background-color: rgb(247,209,205);
+  background-color: rgb(247, 209, 205);
   border: 1px solid #f7d1cd;
   border-radius: 50%;
-  margin-right: 4px;
-  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -279,5 +290,6 @@ h2 {
   #closeBtn {
     font-size: small;
   }
-
+  #popCloseBtn {
+    width: 50%;
 }
