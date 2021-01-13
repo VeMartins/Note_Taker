@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded", getNotes);
 // Saving to LocalStorage
 
 function saveLocalNote(data) {
-  e;
   let notes;
   if (localStorage.getItem("notes") === null) {
     notes = [];
