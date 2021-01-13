@@ -1,6 +1,6 @@
 const note = document.getElementById("newNote");
 const notesMainDiv = document.querySelector(".notePrint");
-let notesArr = []; // array for all the noteDiv(noteBox)
+let notesArr = [];
 
 const popContent = document.getElementById("popContent");
 const closePop = document.getElementById("popCloseBtn");
@@ -54,8 +54,8 @@ const popTheBox = (detailBtn) => {
   if (closePop.nextElementSibling) {
     closePop.nextElementSibling.remove();
   } // to remove 1st cloned <p> if detailBtn is clicked twice(if popBox is not closed 1st)
-  let targt = detailBtn.target.parentNode.firstChild; // to get <p> of the notebox
-  let cln = targt.cloneNode(true); // clones <p> from notebox
+  let targt = detailBtn.target.parentNode.firstChild;
+  let cln = targt.cloneNode(true);
   cln.setAttribute("class", "clone");
   popContent.appendChild(cln);
 
@@ -65,22 +65,23 @@ const popTheBox = (detailBtn) => {
 
 const closeNote = (closeBtn) => {
   closeBtn.stopPropagation();
-  let boxNote = closeBtn.target.parentNode; //targets noteBox (parentNode of closeBtn)
+  let boxNote = closeBtn.target.parentNode;
   removeLocalNotes(boxNote);
   boxNote.parentNode.removeChild(boxNote);
 };
 
 const closePopBox = () => {
-  let clone = document.querySelector(".clone"); //.clone created in popTheBox event listener
-  clone.remove(); // removes cloned <p> uppon closing popbox so it won't show previous cloned <p>.
+  let clone = document.querySelector(".clone");
+  clone.remove();
   popContent.style.display = "none";
 };
 
 document.addEventListener("DOMContentLoaded", getNotes);
+
 // Saving to LocalStorage
 
 function saveLocalNote(data) {
-  //check if there it is already in localstorage
+  e;
   let notes;
   if (localStorage.getItem("notes") === null) {
     notes = [];
